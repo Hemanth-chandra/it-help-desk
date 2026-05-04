@@ -276,20 +276,7 @@ with st.sidebar:
     else:
         user_name = st.text_input("Name", value="Ravi Kumar", label_visibility="collapsed")
     st.markdown("---")
-    st.markdown("**🤖 AI Priority Detection**")
-    api_key_input = st.text_input(
-        "Anthropic API Key (optional)",
-        type="password",
-        placeholder="sk-ant-...",
-        label_visibility="collapsed",
-        help="If provided, AI will detect ticket priority. Otherwise keyword engine is used."
-    )
-    if api_key_input:
-        os.environ["ANTHROPIC_API_KEY"] = api_key_input
-        st.markdown("<small style='color:#90EE90'>✓ AI mode active</small>", unsafe_allow_html=True)
-    else:
-        st.markdown("<small style='color:#aaa'>Keyword mode (no key needed)</small>", unsafe_allow_html=True)
-    st.markdown("---")
+   
     st.markdown("<small style='color:#aaa'>SAD Project · IIITM Gwalior</small>", unsafe_allow_html=True)
 
 page_name = page.split(" ", 1)[1]
